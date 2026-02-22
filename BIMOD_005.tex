@@ -1,0 +1,108 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\geometry{margin=1in}
+
+\title{BIMOD: A Nasion-Based Polarity Discrimination Model Toward Polarity-Aware Instrumentation}
+\author{Author Name}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This study proposes BIMOD, a nasion-centered structural polarity discrimination model formalized through vector-field abstraction and energy-based resonance conditions. The framework defines an eight-position structural polarity mapping and introduces a testable constraint formulation under information-mediated conditions. An auxiliary double-blind optical protocol is outlined to evaluate classification consistency using raw, unprocessed photographic data. The model is presented as a formal abstraction requiring empirical validation and is positioned as a step toward polarity-aware measurement architectures.
+\end{abstract}
+
+\section{Introduction}
+
+This study is motivated by the objective of advancing human-centered measurement, understood as measurement architectures that formally incorporate structured individuality. 
+
+The present work proposes a nasion-based polarity discrimination model (BIMOD) framed as a formal and testable abstraction. No new physical law is claimed; empirical validation remains necessary.
+
+\section{Structural Polarity Mapping}
+
+An eight-position structural polarity mapping is defined relative to the nasion reference point. Let the polarity state be represented as:
+
+\[
+P_i \in \{+1, -1\}, \quad i = 1,\dots,8
+\]
+
+The structural configuration is represented as a vector field:
+
+\[
+\mathbf{F} = \sum_{i=1}^{8} P_i \mathbf{e}_i
+\]
+
+where $\mathbf{e}_i$ are basis vectors corresponding to defined spatial orientations.
+
+\section{Energy-Based Resonance Condition}
+
+We define an interaction energy functional:
+
+\[
+E = - \sum_{i=1}^{8} P_i S_i
+\]
+
+where $S_i$ denotes stimulus polarity components.
+
+Resonance is defined under the constraint:
+
+\[
+\frac{\partial E}{\partial P_i} = 0
+\]
+
+This formulation is presented as a modeling abstraction rather than a confirmed physiological mechanism.
+
+\section{Interpretive Boundaries}
+
+The polarity field representation introduced here should be interpreted as a formal abstraction. It does not imply established bioelectromagnetic equivalence.
+
+Empirical validation through controlled experimentation remains an essential next step.
+
+\section{Discussion}
+
+An auxiliary experimental direction is outlined in Appendix A, where polarity discrimination is tested using raw optical representations of magnetized samples under double-blind conditions. This protocol is designed to constrain explanatory models by separating direct field exposure from information-mediated conditions.
+
+If classification consistency persists under strictly unprocessed optical data, the nasion-centered polarity model gains structural robustness as an information-sensitive abstraction.
+
+\appendix
+
+\section*{Appendix A: Stage-1 Optical Polarity Discrimination Protocol}
+
+\subsection*{Objective}
+
+To evaluate whether polarity discrimination persists when direct exposure is replaced by photographic representations.
+
+\subsection*{Materials}
+
+\begin{itemize}
+\item Magnetized samples (recommended $N \ge 20$)
+\item Independently verified polarity orientation
+\item Standardized photographic setup
+\end{itemize}
+
+\textbf{Raw Data Requirement:}  
+All images must be original raw files. No AI enhancement, filtering, contrast adjustment, or post-processing is permitted. Metadata must be preserved.
+
+\subsection*{Statistical Criterion}
+
+For $N=20$:
+
+\[
+P(X \ge 15) < 0.05
+\]
+
+One-sided binomial test ($\alpha = 0.05$).
+
+For true accuracy $\ge 0.80$, statistical power exceeds 80\%.
+
+\bibliographystyle{plain}
+\bibliography{BIMOD_005_references}
+
+\end{document}
