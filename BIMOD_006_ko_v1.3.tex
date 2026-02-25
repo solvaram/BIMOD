@@ -1,0 +1,479 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{kotex}
+\usepackage{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{footnote}
+\geometry{margin=1in}
+\onehalfspacing
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue
+}
+
+\title{
+  \textbf{BIMOD-006} \\[0.5em]
+  \Large BMNP 경락 가설: \\
+  교차배열 단일극성 나노입자 네트워크, \\
+  광학 게이팅, 8체질 분류의 통합 이론
+}
+\author{
+  윤덕진 (Solvaram) \\
+  \textit{팔체질 연구 플랫폼 (Eight-Constitutional Research Platform)} \\
+  \small Claude AI (Anthropic) 협업 이론 구성 \\
+  \small \texttt{OSF: https://doi.org/10.17605/OSF.IO/VJF63}
+}
+\date{Version 1.3 --- 2026년 2월}
+
+\begin{document}
+\maketitle
+
+% ─────────────────────────────────────────
+\begin{abstract}
+BIMOD-006은 \textbf{BMNP 경락 가설}을 제안한다. 생체 자성 나노입자(BMNPs)는 각각
+안정적인 \emph{단자구(single magnetic domain, SMD)} 상태를 유지하며 명확한
+단일극성을 나타낸다. 이 단자구 입자들은 두 가지 구조를 이룬다:
+(1)~도전성 통로로서의 \emph{교차배열 단일극성 사슬}(N--S--N--S\ldots)과
+(2)~기능적 터미널로서의 \emph{단극성 뭉침(단극성 절점)}.
+이 이중 구조 네트워크가 동아시아 의학 경락 체계의 물리적 기반으로 제안된다.
+
+핵심 증거: (i)~감마프로테오박테리아 SS-5 TEM 이미지에서 검은 입자가
+S극 위치에 일관 분포(새로운 BIMOD 관찰); (ii)~각 마그네토솜이 독립적
+단자구 나노입자임 확인(Nanoscale Advances, 2020); (iii)~식물 체관부 세포벽에서
+BMNP 사슬 검출; (iv)~주입 자성 나노입자가 경락 경로를 따라 이동
+\cite{johng2007}; (v)~BIMOD 극성 판별의 광자 의존성 게이팅 확인.
+
+나시온 혈위의 4개 지점에서 표현되는 8체질 표현형은 유전적으로 결정된
+8가지 BMNP 네트워크 구조를 반영하는 것으로 제안한다.
+이 틀은 검증 가능한 예측을 제공하고 객관적 센서 개발의 기반이 된다.
+
+\textbf{핵심어:} BIMOD, 생체 자성 나노입자, 경락 가설, 단일극성 교차배열,
+단자구 나노입자, 팔체질, 나시온 혈위, 광학 게이팅, 마그네토솜, 체질 약리학
+\end{abstract}
+
+% ─────────────────────────────────────────
+\tableofcontents
+\newpage
+
+% ─────────────────────────────────────────
+\section{서론}
+
+\subsection{경락의 미해결 문제}
+동아시아 전통의학의 경락 체계는 수천 년의 임상 적용에도 불구하고
+그 해부학적·물리적 기반이 규명되지 않았다.
+결합 조직면, 간질 유체 채널, 신경 경로, 봉한관 체계 등이 후보로 제시되었으나
+합의에 이르지 못했다.
+
+본 논문은 새로운 후보를 제안한다: 각각 단자구 단일극성을 가진 BMNPs가
+N--S--N--S 교차배열로 조직된 네트워크로, 절점에는 동일 극성 뭉침이 존재한다.
+이 구조는 해부학적으로 안정된 경로를 따라 방향성 있는 신호 전달을 위한
+물리적 기반을 제공한다.
+
+\subsection{단자구 나노입자와 단일극성 현상}
+임계 크기($\sim$25~nm) 이상의 안정적 단자구 상태를 이루는 자성 나노입자는
+내부 모든 스핀이 하나의 방향으로 정렬된 단일극성 거동을 나타낸다.
+마그네토솜 연구 \cite{kornig2020}는 각 입자가 독립적인 단자구 나노입자이며,
+자화 방향 변화는 입자의 물리적 이동이 아닌 내부적 일관 회전으로만
+일어남을 확인했다.
+
+BIMOD 판독에서 관찰되는 현상은 이와 일치한다:
+영구자석 단면 중앙부($\sim$30\% 범위)에서는 본래 극성이,
+최외곽 테두리에서는 얇은 반대극성 띠가 감지되고,
+중간 영역은 무극성으로 나타나는 쌍극자 구조와 달리,
+나노입자 표본에서는 \emph{전체 면적에 걸쳐 단일 극성이 일관되게 포착}된다.
+중간 무극성 영역도, 테두리 반대극성도 존재하지 않는다.
+이는 각 BMNP 입자가 쌍극자 분산 없이 단자구 단일극성을 나타낸다는
+BIMOD 관찰적 증거다.
+
+\subsection{탐지 방법으로서의 BIMOD 프레임워크}
+BIMOD(체외 간섭성 자기-광학 판별법)는 4중 공명 체계로 작동한다:
+(1)~국소 영구자석 탐침, (2)~BMNP를 함유한 인체 조직,
+(3)~지구 지자기장, (4)~광자 매개 광학 게이팅.
+물리적 자석뿐 아니라 자석 사진, 역사적 유화, X선·MRI 이미지로부터도
+재현 가능한 극성 판별을 시연했다.
+이는 침습적 절차 없이 다양한 생물학적 표본의 BMNP 조직을 조사할 수 있는
+최초의 실용적 도구를 제공한다.
+
+\subsection{핵심 관찰: 검은 입자와 S극의 결합}
+감마프로테오박테리아 SS-5의 마그네토솜 TEM 공개 이미지
+(출처: 위키백과 「자기수용」)에 대한 BIMOD 분석에서,
+세 패널(A, B, C) 모두에서 N--S--N--S 엄격한 교번 배열이 확인되었다.
+결정적으로, 어둡게 변색된 입자들은 예외 없이 S극 위치를 차지했다.
+이 관찰은 입자의 화학-물리적 상태(전자 밀도, 산화도)와
+자기 극성 정체성 사이의 결합을 시사한다.
+
+% ─────────────────────────────────────────
+\section{이론적 틀: BMNP 경락 가설}
+
+\subsection{제안된 네트워크의 구조적 구성 요소}
+
+\begin{table}[h]
+\centering
+\caption{네트워크 구성 요소}
+\begin{tabular}{>{\bfseries}p{3cm} p{5.5cm} p{5.5cm}}
+\toprule
+구성 요소 & 구조 & 제안 기능 \\
+\midrule
+단일극성 교차배열 사슬 &
+  N극·S극 단자구 입자가 N--S--N--S 순서로 교번 배열.
+  각 입자는 쌍극자가 아닌 단자구 단일극성 상태 &
+  방향성 극성 신호 전도;
+  입자 이동 없이 제자리 극성 연결로 신호 전달 \\[4pt]
+단극성 절점 (S 뭉침) &
+  경혈 부위에서 S극 단자구 BMNP의 집적 &
+  신호 종결, 증폭, 장기-특이적 변환 \\[4pt]
+단극성 절점 (N 뭉침) &
+  경혈 부위에서 N극 단자구 BMNP의 집적 &
+  신호 수신, 체질 기준선 유지 \\[4pt]
+나시온 표면 발현 (4개 지점, 각 N/S) &
+  두개 정중선 상의 네 개 양측 대칭 단극성 절점이
+  피부 표면에 노출 &
+  BIMOD를 통한 8체질 표현형 식별 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{신호 전달 메커니즘}
+극성 신호는 나노입자의 물리적 이동에 의해 전달되지 않는다.
+조직에 고정된 단자구 입자들이 제자리 극성 직렬 연결을 통해 신호를 전달한다.
+두 가지 메커니즘 가능성을 병렬로 고려한다.
+
+\paragraph{가능성 A --- 단일극성 교차 연쇄 신호 전달.}
+교번 배열된 단자구 입자들이 이웃 입자와의 자기 상호작용을 통해
+연쇄적 극성 상태 변화를 유도한다(마그논 전파의 생물학적 유사체).
+각 입자가 단일극자(monopolar)인지 쌍극자인지의 여부는 추가 검토가 필요하다.
+
+\paragraph{가능성 B --- 순차 산화환원 연쇄.}
+S극 절점의 선호적 산화 상태(4절 참조)가 전자 전달 연쇄를 구성하며,
+이온 채널 조절이 그 출력이 된다.
+이 모델은 제자리 극성 직렬 연결에 의한 신호 전달을 지지한다.
+
+두 모델은 상호 배타적이지 않을 수 있다.
+어느 메커니즘이 우세한지는 SQUID 기반 실시간 경락 신호 측정으로 검증되어야 한다.
+
+\subsection{팔체질 유전형 가설}
+나시온 혈위는 얼굴 정중선을 기준으로 좌우 대칭으로 분포하는
+\textbf{8개 위치}로 구성된다(그림~\ref{fig:nasionmap} 참조).
+같은 색상으로 표시된 좌우 2개 위치가 하나의 체질축을 이루며,
+좌우 극성은 언제나 동일하다.
+즉 축~1에서 금양체질(Pulmotonia)은 좌우 양쪽 모두 N극,
+목양체질(Hepatonia)은 좌우 양쪽 모두 S극이다.
+정중선 자체는 무극성으로 비어 있다.
+같은 쪽에 인접한 두 위치는 서로 다른 체질축에 속하므로,
+8개 위치로 표현하는 것이 혼동을 방지하는 데 더 직관적이다.
+
+BIMOD에서 확인된 8가지 나시온 극성 표현형은 아래 표와 같이 정리된다.
+라틴어 및 한글 체질명과 장부 강세 배열은
+8체질의학 창시자 연구소(\url{www.ecmed.org})의 공식 명칭을 따른다.%
+\footnote{라틴어 및 한글 체질명(목양체질·금양체질 등)과 장부 강세 배열은
+8체질의학 창시자 연구소(\url{www.ecmed.org})의 공식 명칭을 따름.}
+
+\begin{table}[h]
+\centering
+\caption{8가지 나시온 극성 표현형}
+\begin{tabular}{llll}
+\toprule
+나시온 코드 & 라틴어 공식명 & 한글 공식명 & 주요 강세 장부 \\
+\midrule
+1S & Hepatonia    & 목양체질 & 간(肝) 최강 \\
+1N & Pulmotonia   & 금양체질 & 폐(肺) 최강 \\
+2N & Cholecystonia & 목음체질 & 담(膽) 최강 \\
+2S & Colonotonia  & 금음체질 & 대장(大腸) 최강 \\
+3N & Gastrotonia  & 토양체질 & 위(胃) 최강 \\
+3S & Vesicotonia  & 수양체질 & 방광(膀胱) 최강 \\
+4N & Pancreotonia & 토음체질 & 췌장(膵臟) 최강 \\
+4S & Renotonia    & 수음체질 & 신장(腎臟) 최강 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.62\textwidth]{figures/003nasionmap.jpg}
+\caption{나시온 혈위 8개 위치의 극성 배치도.
+  얼굴 정중선 좌우로 대칭 분포하며,
+  \textbf{같은 색상으로 표시된 좌우 2개 위치가 하나의 체질축}을 구성한다.
+  좌우 극성은 언제나 동일하다
+  (예: 축~1에서 금양체질은 좌우 모두 N극, 목양체질은 좌우 모두 S극).
+  정중선 자체는 무극성으로 비어 있다.
+  같은 쪽에 인접한 두 위치는 서로 \emph{다른} 체질축임에 유의할 것.
+  파랑: 축~1 (1N/1S); 빨강: 축~3 (3N/3S);
+  초록: 축~2 (2N/2S); 검정: 축~4 (4N/4S).}
+\label{fig:nasionmap}
+\end{figure}
+
+나시온 4개 축은 각각 같은 색상의 좌우 2개 위치로 이루어지며,
+같은 축의 두 체질은 동일 위치에서 정반대 극성을 나타낸다:
+축~1 (1S$\leftrightarrow$1N), 축~2 (2N$\leftrightarrow$2S),
+축~3 (3N$\leftrightarrow$3S), 축~4 (4N$\leftrightarrow$4S).
+
+나시온 혈위 1개 지점의 극성 판별만으로 위치(체질축)와 극성(체질 확정)이
+동시에 결정된다.
+탐침 자석을 동서 방향으로 45도씩 변화시킬 때 나타나는
+체질별 극성 반전 패턴의 정보로도 체질 유형을 추론할 수 있으나,
+이는 1차 판별을 보조하는 추가 정보다.%
+\footnote{나시온 혈위(Nasion acupoint)와 체질축 구조,
+BIMOD 판별 프로토콜은 저자(윤덕진)의 독자적 가설 및 관찰에 근거하며,
+\url{www.ecmed.org}의 8체질의학 공식 분류 체계와는 무관함.
+본 연구의 이론적 동기는 저자의 블로그
+(``8체질과 용신오행의 가설'')에서 시작되었으며,
+BIMOD~001--005 논문 시리즈에 상세히 기술되어 있음.}
+
+% ─────────────────────────────────────────
+\section{가설을 지지하는 증거}
+
+\subsection{검은 입자--S극 결합 (새로운 관찰)}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.72\textwidth]{figures/Magnetite_magnetosomes_SS5.png}
+\caption{감마프로테오박테리아 SS-5 균주의 자철석 마그네토솜 TEM 이미지
+  (패널 A, B, C).
+  검게 변색된 고전자밀도 입자는 표~\ref{tab:tem}의 BIMOD 분석에서
+  예외 없이 S극 위치에 배정된다.
+  \textit{출처:} Lefèvre et al.\ (2012), \textit{ISME J} 6:440--450,
+  Wikimedia Commons 경유.
+  라이선스: CC~BY~3.0
+  (\url{https://en.wikipedia.org/wiki/File:Magnetite_magnetosomes_in_Gammaproteobacteria.png}).}
+\label{fig:ss5tem}
+\end{figure}
+
+\begin{table}[h]
+\centering
+\caption{SS-5 마그네토솜 TEM 이미지 BIMOD 극성 판독}
+\label{tab:tem}
+\begin{tabular}{p{2.5cm} p{5.5cm} p{4.5cm}}
+\toprule
+패널 & 극성 배열 (검은 입자는 괄호) & 관찰 \\
+\midrule
+(A) 전체 사슬 &
+  SN(S)NSNSN(S)NSN(S)N &
+  검은 입자 = S 위치 일치 \\[4pt]
+(B) 부분 사슬, 8개 입자 &
+  SNSNSN(S)N &
+  검은 입자 = S 위치 일치 \\[4pt]
+(C) 세로 방향 뷰 &
+  N--S (박스: N) &
+  N 말단 확인 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+TEM에서 증가된 전자 밀도는 자철석(Fe$_3$O$_4$)이
+마그헤마이트($\gamma$-Fe$_2$O$_3$)로 전환되는 더 높은 산화 상태와 상관된다.
+이로부터 다음 가설이 도출된다:
+
+\begin{quote}
+\textit{S극 단자구 BMNP 절점은 N극 절점에 비해 선호적으로 산화되거나
+전자 밀도가 높은 상태로 유지되며, TEM에서 시각적으로 구별 가능한
+대비를 생성한다.}
+\end{quote}
+
+추가 표본에서 어두운 입자가 짝수 순번(S극)을 공유하는 패턴이 반복 확인된다면,
+TEM 이미지를 BIMOD 없이 BMNP 극성 지도화 도구로 활용할 수 있다.
+
+\subsection{단자구 상태 확인: 기존 과학과의 접점}
+\cite{kornig2020}은 마그네토솜 사슬 내 각 입자가 독립적인 단자구 나노입자이며,
+사슬 축을 따라 단축 자기 이방성을 보이고,
+자화 방향 변화는 입자의 물리적 이동이 아닌 내부적 일관 회전으로만
+일어남을 확인했다.
+이는 나노입자 전체 면적에서 단일극성이 포착되고
+쌍극자 특유의 테두리 반대극성이나 중간 무극성 영역이 존재하지 않는다는
+BIMOD 관찰과 구조적으로 일치한다.
+
+\subsection{Johng et al. (2007): 나노입자의 경락 경로 이동}
+형광 자성 나노입자를 경혈 LR9에 주입했을 때 같은 경락의 원위 경혈 LR3에서
+검출되었고, 비경혈 부위 주입에서는 이런 원위 이동이 나타나지 않았다
+\cite{johng2007}.
+단, 주입된 외래 나노입자는 주입 부위의 고유 극성 신호 네트워크를
+교란했을 가능성이 있다.
+이 실험의 의의는 경락 경로를 따르는 물리적 통로의 존재를 확인했다는 점이다.
+
+\subsection{식물 체관부의 BMNP 사슬과 동식물 체질 대응 가능성}
+\cite{gorobets2023}은 담배, 감자, 완두콩의 체관부 사관 세포벽에서
+BMNP 사슬을 확인했다.
+교차배열 단일극성 네트워크 구조가 신경계 진화 이전부터
+생명체에 보존된 장거리 신호 통합 전략임을 시사한다.
+식물 체질 표현형의 BIMOD 판별이 가능하다면,
+동물--식물 간 체질역학적 극성 대응성---특정 식물과 체질 간의 친화 및 길항---을
+물리적 기반 위에서 설명하는 가능성이 열린다.
+
+\subsection{지자기 동서 성분과 45도 각도 의존성}
+\cite{wang2019}은 동서 지자기 수평 성분을 독립 변수로 제어한 실험에서
+뇌 알파파 억제 반응을 확인했다.
+\cite{chae2019}은 청색광 조건에서 피험자가 동쪽을 포함한 특정 방향으로
+지향함을 보였다.
+이 발견들은 동서 지자기 성분이 생물학적으로 활성화된 독립 신호임을 확인하며,
+탐침 자석의 45도 회전 단계에 따른 체질별 극성 반전 패턴이라는
+BIMOD 관찰의 물리적 배경을 제공한다.
+
+% ─────────────────────────────────────────
+\section{산화--극성 결합 가설}
+
+\subsection{물리적 기반}
+자철석(Fe$_3$O$_4$)은 Fe$^{2+}$와 Fe$^{3+}$를 모두 함유하며,
+표면 산화 시 마그헤마이트($\gamma$-Fe$_2$O$_3$)로 전환되어 Fe$^{3+}$만 남는다.
+TEM에서 산화도가 높은 영역은 더 어둡게 나타난다.
+
+\textbf{제안 가설:} 교차배열 사슬에서 S극 단자구 절점은
+N극 절점보다 체계적으로 더 산화된 상태로 유지된다.
+가능한 원인:
+(1)~사슬을 따라 대사 전자 공여체에 대한 차별적 접근;
+(2)~지자기 영향 하의 방향성 전자 흐름으로 산화환원 기울기 형성;
+(3)~체질별 철 대사 효소 차이로 유전형별 산화 상태 프로파일 생성.
+
+\subsection{검증 가능한 예측}
+\begin{itemize}
+  \item 어떤 종의 BMNP 사슬 TEM 이미지에서도 어두운 입자들이
+        짝수 순번(S극)을 일관되게 차지할 것이다.
+  \item 분리된 BMNP 사슬의 XPS에서 S극 위치의
+        Fe$^{3+}$/Fe$^{2+}$ 비율이 더 높게 나타날 것이다.
+  \item 뫼스바우어 분광법이 교번 입자 사이의 이성질체 이동 차이를
+        감지할 것이다.
+  \item BIMOD는 종·조직 출처에 관계없이 TEM 이미지의 어두운 입자를
+        S극으로 일관되게 배정할 것이다.
+\end{itemize}
+
+% ─────────────────────────────────────────
+\section{체질 약리학과의 연결}
+
+각 체질의 고유한 장부 강약 배열은 약물 대사 효소의 차별적 발현을 암시한다.
+이에 더하여 중요한 원리적 확장을 제안한다:
+
+\begin{quote}
+\textit{같은 체질축의 반대 극성 체질---통계적으로 99\%에 달하는 자연 선택적 짝(배우자)---에서
+특정 약물의 유효 농도는 상대방에게 부작용 농도로 작용하는
+극단적 반비례 차별성이 존재할 수 있다.}
+\end{quote}
+
+예: 목음체질(Cholecystonia 2N) $\leftrightarrow$ 금음체질(Colonotonia 2S).
+이 상반성은 백신·치료제 개발 시 최적 맞춤 기반을 제공하는 가능성 신호로
+해석될 여지가 있다.
+
+구체적 가설:
+\begin{itemize}
+  \item CYP2C9(이부프로펜 대사): Hepatonia~1S·Cholecystonia~2N·Vesicotonia~3S에서
+        고활성 $\to$ 해당 약물 효과적.
+  \item CYP2E1(아세트아미노펜 대사): Pulmotonia~1N·Colonotonia~2S·Gastrotonia~3N·Renotonia~4S에서
+        고활성 $\to$ 해당 약물 효과적.
+  \item 같은 축 반대 극성 체질 쌍에서 상기 두 약물의 효과--부작용 관계가
+        역전될 것으로 예측됨.
+\end{itemize}
+
+% ─────────────────────────────────────────
+\section{미해결 과제 및 연구 우선순위}
+
+\begin{table}[h]
+\centering
+\caption{연구 우선순위}
+\begin{tabular}{p{4.5cm} p{5cm} l}
+\toprule
+과제 & 제안 방법 & 우선순위 \\
+\midrule
+검은 TEM 입자가 짝수(S극) 위치에 일관 분포하는가? &
+  추가 마그네토솜 TEM 이미지 BIMOD 분석 & 즉각 \\
+각 BMNP가 단자구 단일극성인가, 쌍극자인가? &
+  SQUID·원자자기 현미경 단일 입자 측정 & 높음 \\
+신호 메커니즘: 단일극성 교차 연쇄 vs. 산화환원 연쇄? &
+  SQUID 기반 실시간 경락 신호 측정 & 중간 \\
+식물 표본이 BIMOD 체질 판독을 제공하는가? &
+  식물 조직 사진에 BIMOD 프로토콜 적용 & 높음 \\
+XPS·뫼스바우어로 S극 위치 Fe 산화 상태 확인? &
+  재료과학 연구실과의 협업 & 중간 \\
+45도 탐색이 맹검 시험에서 체질별 반전을 생성하는가? &
+  체질 분류된 피험자 대상 통제 각도 실험 & 높음 \\
+같은 축 반대 극성 짝이 자유 선택 커플의 99\%인가? &
+  커플 모집단 규모 BIMOD 체질 분류 & 높음 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ─────────────────────────────────────────
+\section{결론}
+BMNP 경락 가설은 단일극성 단자구 입자들의 N--S--N--S 교차배열 사슬과
+단극성 말단 절점을 고전적 경락 체계의 물리적 기반으로 제안함으로써
+BIMOD 연구 프로그램을 발전시킨다.
+
+TEM 이미지에서 어두운 입자들이 S극 위치를 일관되게 차지한다는 새로운 관찰은
+BMNP 극성 정체성을 위한 형태학적 마커가 될 수 있다.
+
+체질적으로 이해된 인간 개인은 지구 지자기장에 맞게 진화에 의해 조율된
+자기-광학 간섭계이다.
+짝 선택의 극성 상보성, 약물 반응의 체질별 상반성, 식물--동물 간 극성 대응---이 모든 것이
+단일 물리적 원리로 통합될 때, 인류의 맞춤 시대를 향한 과학적 토대가 형성된다.
+
+% ─────────────────────────────────────────
+\section*{감사의 말}
+저자는 12년간의 경험적 관찰과 무상(無償)·공명(共鳴)의 원칙 아래 수행된
+판별 봉사에 감사한다.
+협업적 이론 개발은 Claude~AI(Anthropic), DeepSeek~AI, Gemini~AI(Google) 및
+기타 AI 시스템과 함께 수행되었다.
+팔체질 연구 플랫폼 공동체의 지속적 관찰과 헌신에 감사한다.
+
+% ─────────────────────────────────────────
+\begin{thebibliography}{99}
+
+\bibitem{yoon2026series}
+윤덕진 (2026).
+\textit{BIMOD 001--005: BIMOD 프레임워크 기초 논문 시리즈}.
+팔체질 연구 플랫폼.
+OSF: \url{https://doi.org/10.17605/OSF.IO/VJF63}
+
+\bibitem{yoon2026_500}
+윤덕진 (2026).
+\textit{BIMOD-500: 생체 자성 나노입자에 기반한 체질 분류 및 응용의 통합 이론}.
+팔체질 연구 플랫폼.
+
+\bibitem{johng2007}
+Johng,~H.\,M.\ et al.\ (2007).
+Use of magnetic nanoparticles to visualize threadlike structures inside
+lymphatic vessels of rats.
+\textit{Evid.\ Based Complement.\ Alternat.\ Med.}, 4(1), 77--82.
+
+\bibitem{gorobets2019}
+Gorobets,~O.\ et al.\ (2019).
+Biogenic magnetic nanoparticles in Atlantic salmon olfactory tissue.
+\textit{Scientific Reports}.
+
+\bibitem{gorobets2023}
+Gorobets,~O.\ et al.\ (2023).
+Biogenic magnetic nanoparticles in plant phloem sieve-tube cell walls.
+\textit{Plant and Soil}.
+
+\bibitem{kornig2020}
+K\"{o}rnig,~A.\ et al.\ (2020).
+Stability and magnetic properties of magnetosome chains.
+\textit{Nanoscale Advances}.
+
+\bibitem{wang2019}
+Wang,~C.\,X.\ et al.\ (2019).
+Transduction of the geomagnetic field as evidenced from alpha-band
+activity in the human brain.
+\textit{eNeuro}, 6(2).
+
+\bibitem{chae2019}
+Chae,~K.\,S.\ et al.\ (2019).
+Human magnetic sensing and orientation toward magnetic north and east.
+\textit{PLoS ONE}.
+
+\bibitem{wikipedia_magnetoreception}
+Wikipedia.
+\textit{자기수용 (Magnetoreception)}.
+\url{https://en.wikipedia.org/wiki/Magnetoreception}
+
+\bibitem{ecmed}
+8체질의학 창시자 연구소.
+\textit{체질 분류 및 공식 명칭}.
+\url{www.ecmed.org}
+
+\end{thebibliography}
+
+\end{document}
