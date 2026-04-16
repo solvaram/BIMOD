@@ -1,0 +1,140 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{natbib}
+\usepackage{kotex}
+
+\geometry{margin=1in}
+
+\title{005\_BIMOD: 4-지점 이산 극성 분류 방법론}
+\author{
+윤덕진 (Solvaram) \\
+\textit{팔체질 연구 플랫폼} \\
+\texttt{with methodological clarification by DeepSeek AI}
+}
+\date{Version 3.2 -- 2026년 2월 24일}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+본 논문은 BIMOD 프레임워크의 이산적 방법론적 기초를 정식화한다. 
+나시온 중심 기준 구조는 네 개의 해부학적 지점을 정의한다. 
+각 지점은 이진 두개 극성 상태(+1 또는 -1)를 가지며, 8-상태 분류 체계를 형성한다. 
+이 모델은 상위 수준의 물리적 가설과 독립적인 이산적 구조적 분류 체계로 제시된다.
+\end{abstract}
+
+\section{방법론적 범위}
+
+005\_BIMOD 논문은 분류 아키텍처만을 정의한다. 
+연속적 벡터장, 자기 메커니즘, 생물물리학적 공명 모델을 주장하지 않는다. 
+이러한 상위 수준 해석은 BIMOD-500에서 다루어지며, 여기서 확립된 분류 기반 위에 물리적 가설을 통합한다.
+
+\section{구조적 정의}
+
+나시온을 해부학적 기준 원점으로 정의한다. 이는 개인 간 위치적 안정성으로 알려진 두개계측 랜드마크이다 \citep{nasion_wikipedia}.
+
+나시온 주위에 대칭적으로 네 개의 지점을 정의한다:
+
+\[
+L = \{L_1, L_2, L_3, L_4\}
+\]
+
+각 지점은 이진 극성 상태를 갖는다:
+
+\[
+P(L_j) \in \{+1,-1\}
+\]
+
+분류 공간은 데카르트 곱으로 정의된다:
+
+\[
+\mathcal{C} = L \times \{+1,-1\}
+\]
+
+따라서 총 분류 상태의 수:
+
+\[
+|\mathcal{C}| = 4 \times 2 = 8
+\]
+
+이 이산적 구조는 범주적 배타성을 보장한다: 각 개인은 여덟 가지 가능한 상태 중 정확히 하나에 해당한다.
+
+\section{기하학적 참조}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{005_NasionAI.jpg}
+\caption{
+네 개의 측정 지점의 대략적 위치를 보여주는 전체 얼굴 나시온 참조 이미지. 
+각 지점(L1–L4)은 두 개의 극성 상태를 가지며, 8-상태 분류 체계를 형성한다. 
+실제 검출 절차는 시각적 검사가 아닌 BIMOD 프로토콜을 따른다.
+}
+\label{fig:nasion}
+\end{figure}
+
+\section{레이블 층과 선택적 매핑}
+
+여덟 가지 상태는 선택적으로 체질 레이블에 매핑될 수 있다:
+
+\begin{itemize}
+    \item 1S (목양체질), 1N (금양체질)
+    \item 2N (목음체질), 2S (금음체질)
+    \item 3N (토음체질), 3S (수음체질)
+    \item 4N (토양체질), 4S (수양체질)
+\end{itemize}
+
+그러나 이러한 해석적 매핑은 상위 수준의 이론적 층(BIMOD-500의 Track B)에 속하며, 이 방법론적 정의에 내재적이지 않다. 분류 구조는 특정 해석과 독립적으로 존재한다.
+
+\section{통계적 재현성}
+
+분류 재현성은 이항 프레임워크를 사용하여 평가할 수 있다 \citep{binomialtest}:
+
+\[
+P(X \ge k | N, p=0.5) = \sum_{i=k}^{N} \binom{N}{i} (0.5)^N
+\]
+
+\(N=20\)회 시행에 대해 유의수준 \(\alpha=0.05\)(단측)에서의 임계값은 \(k=15\)이며, \(P(X \ge 15) = 0.0207\)이다.
+
+경험적 검증은 다음을 요구한다:
+\begin{itemize}
+    \item 맹검 프로토콜 (시행자가 샘플 극성을 모름)
+    \item RAW 이미지 보존 (AI 보정이나 필터링 없음)
+    \item 여러 시행자에 걸친 독립적 재현
+\end{itemize}
+
+\section{물리적 가설과의 관계}
+
+생체자성나노입자는 생물학적 시스템에서 보고되었으며 \citep{Kirschvink1992}, 지자기 상호작용에 기반한 자기수용 모델이 제안되었다 \citep{Ritz2000}. 그러나 여기서 정의된 분류 체계는 특정 물리적 메커니즘에 의존하지 않는다. 이는 다양한 설명 모델을 수용할 수 있는 구조적 프레임워크 역할을 한다.
+
+\section{경계 조건}
+
+본 논문은 이산적 분류 체계만을 정의한다. 
+물리적 설명 모델, 연속적 장 형식화, 경험적 응용은 BIMOD-500 및 시리즈의 다른 논문에서 다루어진다.
+
+\section{결론}
+
+나시온 기반 여덟 극성 체계는 이론적 해석과 경험적 검토에 열려 있으면서도 그로부터 독립적인 이산적 방법론적 분류 프레임워크로 제시된다.
+
+\begin{thebibliography}{99}
+
+\bibitem{Kirschvink1992}
+Kirschvink, J. L. et al. (1992). Magnetite in human tissues: A mechanism for biomagnetic detection? \textit{Bioelectromagnetics}.
+
+\bibitem{Ritz2000}
+Ritz, T. et al. (2000). A model for photoreceptor-based magnetoreception in birds. \textit{Biophysical Journal}, 78(2), 707–718.
+
+\bibitem{binomialtest}
+Clopper, C. J. \& Pearson, E. S. (1934). The use of confidence or fiducial limits illustrated in the case of the binomial. \textit{Biometrika}, 26, 404–413.
+
+\bibitem{nasion_wikipedia}
+Nasion. Wikipedia. Accessed 2026.
+
+\end{thebibliography}
+
+\end{document}

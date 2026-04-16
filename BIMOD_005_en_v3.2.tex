@@ -1,0 +1,139 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{natbib}
+
+\geometry{margin=1in}
+
+\title{005\_BIMOD: A Discrete Four-Locus Polarity Classification Methodology}
+\author{
+DuckJin Yoon (Solvaram) \\
+\textit{Eight-Constitutional Research Platform} \\
+\texttt{with methodological clarification by DeepSeek AI}
+}
+\date{Version 3.2 -- February 24, 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This paper formalizes the discrete methodological foundation of the BIMOD framework. 
+A nasion-centered reference structure defines four anatomical loci. 
+Each locus admits a binary cranial polarity state (+1 or −1), yielding an eight-state classification system. 
+The model is presented as a discrete structural taxonomy independent of higher-level physical hypotheses.
+\end{abstract}
+
+\section{Methodological Scope}
+
+The 005\_BIMOD paper defines only the classification architecture. 
+It does not assert a continuous vector field, magnetic mechanism, or biophysical resonance model. 
+These higher-level interpretations are addressed in BIMOD-500, which integrates physical hypotheses with the taxonomic base established here.
+
+\section{Structural Definition}
+
+Let the nasion be the anatomical reference origin, a craniofacial landmark known for its positional stability across individuals \citep{nasion_wikipedia}.
+
+Define four loci symmetrically positioned around the nasion:
+
+\[
+L = \{L_1, L_2, L_3, L_4\}
+\]
+
+Each locus admits a binary polarity state:
+
+\[
+P(L_j) \in \{+1,-1\}
+\]
+
+The classification space is defined as the Cartesian product:
+
+\[
+\mathcal{C} = L \times \{+1,-1\}
+\]
+
+Thus the total number of classification states:
+
+\[
+|\mathcal{C}| = 4 \times 2 = 8
+\]
+
+This discrete structure ensures categorical exclusivity: each individual corresponds to exactly one of the eight possible states.
+
+\section{Geometric Reference}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{005_NasionAI.jpg}
+\caption{
+Full-face nasion reference image showing the approximate locations of the four measurement loci. 
+Each locus (L1–L4) admits two polarity states, forming an eight-state classification system. 
+The actual detection procedure follows BIMOD protocol rather than visual inspection.
+}
+\label{fig:nasion}
+\end{figure}
+
+\section{Label Layer and Optional Mappings}
+
+The eight states may optionally be mapped to constitutional labels, such as:
+
+\begin{itemize}
+    \item 1S (Hepatonia), 1N (Pulmotonia)
+    \item 2N (Cholecystonia), 2S (Colonotonia)
+    \item 3N (Gastrotonia), 3S (Vesicotonia)
+    \item 4N (Pancreotonia), 4S (Renotonia)
+\end{itemize}
+
+However, such interpretive mappings belong to higher-level theoretical layers (Track B in BIMOD-500) and are not intrinsic to this methodological definition. The taxonomic structure stands independently of any particular interpretation.
+
+\section{Statistical Reproducibility}
+
+Classification reproducibility may be evaluated using a binomial framework \citep{binomialtest}:
+
+\[
+P(X \ge k | N, p=0.5) = \sum_{i=k}^{N} \binom{N}{i} (0.5)^N
+\]
+
+For \(N=20\) trials, the threshold for significance at \(\alpha=0.05\) (one-sided) is \(k=15\), yielding \(P(X \ge 15) = 0.0207\).
+
+Empirical validation requires:
+\begin{itemize}
+    \item Blinded protocols (practitioner unaware of sample polarity)
+    \item RAW image preservation (no AI enhancement or filtering)
+    \item Independent replication across multiple practitioners
+\end{itemize}
+
+\section{Relation to Physical Hypotheses}
+
+Biogenic magnetic nanoparticles have been reported in biological systems \citep{Kirschvink1992}, and magnetoreception models based on geomagnetic interaction have been proposed \citep{Ritz2000}. However, the taxonomic system defined here does not depend on any specific physical mechanism. It serves as a structural framework that can accommodate various explanatory models.
+
+\section{Boundary Condition}
+
+This paper defines a discrete taxonomy only. 
+Physical explanatory models, continuous field formalizations, and empirical applications are addressed in BIMOD-500 and other papers in the series.
+
+\section{Conclusion}
+
+The nasion-based eightfold polarity system is presented as a discrete methodological classification framework, open to theoretical interpretation and empirical examination while remaining independent of both.
+
+\begin{thebibliography}{99}
+
+\bibitem{Kirschvink1992}
+Kirschvink, J. L. et al. (1992). Magnetite in human tissues: A mechanism for biomagnetic detection? \textit{Bioelectromagnetics}.
+
+\bibitem{Ritz2000}
+Ritz, T. et al. (2000). A model for photoreceptor-based magnetoreception in birds. \textit{Biophysical Journal}, 78(2), 707–718.
+
+\bibitem{binomialtest}
+Clopper, C. J. \& Pearson, E. S. (1934). The use of confidence or fiducial limits illustrated in the case of the binomial. \textit{Biometrika}, 26, 404–413.
+
+\bibitem{nasion_wikipedia}
+Nasion. Wikipedia. Accessed 2026.
+
+\end{thebibliography}
+
+\end{document}
